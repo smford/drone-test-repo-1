@@ -1,0 +1,11 @@
+workspace:
+  base: /go
+  path: src/github.com/smford/drone-test-repo-1
+
+pipeline:
+  build:
+    image: golang:latest
+    commands:
+      - ls -la 
+      - echo "hello world" 
+      - go version 
