@@ -9,6 +9,7 @@ pipeline:
       - ls -la 
       - echo "hello world" 
       - go version
+      - go get -u github.com/golang/dep/cmd/dep
       - git clone https://github.com/smford/narcotk-hosts.git
       - cd narcotk-hosts
       - dep ensure
