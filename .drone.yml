@@ -8,4 +8,9 @@ pipeline:
     commands:
       - ls -la 
       - echo "hello world" 
-      - go version 
+      - go version
+      - git clone git@github.com:smford/narcotk-hosts.git
+      - cd narcotk-hosts
+      - dep ensure
+      - go build -o narcotk-hosts main.go
+      - ./narcotk-hosts --setupdb --database=./new-database-file.db
